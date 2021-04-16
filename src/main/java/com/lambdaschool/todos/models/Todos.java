@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "todos")
-public class Todo extends Auditable{
+public class Todos extends Auditable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long todoid;
@@ -23,15 +23,15 @@ public class Todo extends Auditable{
     @JsonIgnoreProperties("user")
     private User user;
 
-    public Todo() {
+    public Todos() {
     }
 
-    public Todo(String description) {
+    public Todos(String description) {
         this.description = description;
 
     }
 
-    public Todo(User user, String description) {
+    public Todos(User user, String description) {
         this.user = user;
         this.description = description;
 
